@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     { name: "GitHub", href: "#" },
     { name: "LinkedIn", href: "#" },
     { name: "Twitter", href: "#" },
     { name: "Instagram", href: "#" },
-  ]
+  ];
 
   const footerLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
-  ]
+  ];
 
   return (
     <footer className="bg-background border-t border-border">
@@ -43,8 +43,8 @@ export default function Footer() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-foreground/70 max-w-md"
             >
-              Creating exceptional digital experiences through innovative design and development. Let's build something
-              amazing together.
+              Creating exceptional digital experiences through innovative design
+              and development. Let's build something amazing together.
             </motion.p>
           </div>
 
@@ -119,10 +119,19 @@ export default function Footer() {
           <p className="text-foreground/60 text-sm mb-4 md:mb-0">
             &copy; {currentYear} Wai Phyo Aung. All rights reserved.
           </p>
-          <p className="text-foreground/60 text-sm">Designed & Built Orgpg</p>
+          <p className="text-foreground/60 text-sm">
+            Designed & Built{" "}
+            <a
+              href="https://github.com/Orgpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-foreground"
+            >
+              Orgpg
+            </a>
+          </p>
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }
-
